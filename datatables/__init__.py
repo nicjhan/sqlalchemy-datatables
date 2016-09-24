@@ -51,6 +51,10 @@ def clean_regex(regex):
     :type regex: str
     :rtype: str with regex to use with database
     '''
+
+    if not isinstance(regex, (str, unicode)):
+        return regex
+
     # copy for return
     ret_regex = regex
 
